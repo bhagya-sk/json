@@ -1,0 +1,30 @@
+{
+  "definitions":{
+    "address":{
+       "type":"object",
+         "required":["street"],
+        "properties":{
+           "street":{"type":"string"},
+            "city":{"type":"string"},
+            "zipcode":{"type":"number"}
+        }
+    
+    }
+  
+  }
+  ,
+  "type":"object",
+    "properties":{
+      "id":{"type":"number"},
+      "name":{"type":"string"},
+      "permanent":{"type":"boolean"},
+      "address":{"$ref":"#/definitions/address"},
+      "phoneNumbers":{"type":"array",
+                      "items":{"type":"number"}
+                     
+                     },
+      "role":{"type":"string"}
+    
+    }
+  
+}
